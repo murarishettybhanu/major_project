@@ -1,0 +1,70 @@
+@layout('layouts.app')
+
+@section('content')
+<style>
+    .underline {
+        margin-top: -20px;
+    }
+</style>
+<div class="container mt-5">
+    <h2 class="text-center">Code Extraction From Image With Language Detector And Compiler Using Optical Character Recognizer</h2>
+    <p class="text-center underline">_____________</p>
+
+    <p>A web based application where a user can extract code from image using a “Optical Character Recognizer (OCR)”, which
+        automatically detects the programming language and provides a couple of options to the user. One of the option
+        is to Compile the code and the other is to Run the code.User can use the application in guest mode, but to save
+        their previous scans and work one should login.</p>
+    <h3>What is OCR?</h3>
+    <p> Literally, OCR stands for Optical Character Recognition. It is a widespread technology to recognise text inside
+        images, such as scanned documents and photos. OCR technology is used to convert virtually any kind of images
+        containing written text (typed, handwritten or printed) into machine-readable text data.
+
+        OCR Technology became popular in the early 1990s while attempting to digitise historic newspapers. Since then
+        the
+        technology has underwent several improvements. Nowadays solutions deliver near to perfect OCR accuracy. Advanced
+        methods like Zonal OCR are used to automate complex document based workflows.</p>
+
+    <br>
+
+    <h3>
+        Popular use-cases for OCR technology
+    </h3>
+    <p>
+
+        Probably the most well known use case for OCR is converting printed paper documents into machine-readable text
+        documents. Once a scanned paper document went through OCR processing, the text of the document can be edited
+        with word processors like Microsoft Word or Google Docs. Before OCR technology was available, the only option to
+        digitise printed paper documents was to manually re-typing the text. Not only was thi massively time consuming,
+        it also came with inaccuracy and typing errors.
+
+        OCR is often used as a “hidden” technology, powering many well known systems and services in our daily life.
+        Less known, but as important, use cases for OCR technology include data entry automation, indexing documents for
+        search engines, automatic number plate recognition, as well as assisting blind and visually impaired persons.
+
+        OCR technology has proven immensely useful in digitising historic newspapers and texts that have now been
+        converted into fully searchable formats and had made accessing those earlier texts easier and faster.</p>
+    <br>
+    <h3>Why programming language detection ? and its approach</h3>
+    <p>Skilled programmers often can write software in and can recognize dozens of programming languages, but computer
+        scientists and engineers have given birth to thousands and thousands of programming languages. O’Reilly has made
+        a great poster publicly available to visualize the history of the most popular programming languages until 2004.
+        History of Programming Languages, O'Reilly
+
+        But programmers can not detect every language, especially not less popular and older ones. They also often like
+        to search and group source code by programming language. Some websites and infrastructure like GitHub will try
+        to classify source code based on some heuristics, like the file extension or the presence of some string, for
+        example using regular expressions. When the file contains for example the string SELECT * and the file extension
+        is .sql, this may be evidence that the query language SQL is used.</p>
+    <br>
+    <h3>Online Compiler</h3>
+    <p>Often there is a need to have many compilers in the same machine to compile programs in different languages at
+        the same time. This paper focuses on solving the problem of storage and portability of compilers. The user
+        without having to install any compiler needs to submit the program into the user interface provided. The
+        controller will then decide which compiler server the program should be assigned to compile, depending on the
+        load of backend compilers. The compiler server will compile and run the program. The output is then given back
+        to the user. The distribution of load by the controller is also tested by calculating the total response time of
+        the programs in both serial and parallel program allocation to compilation tier.</p>
+</div>
+
+
+@endsection

@@ -1,0 +1,49 @@
+@layout('layouts.app')
+
+@section('content')
+<div class="container mt-5">
+    <div class="row">
+        <div class="col-md-4 mb-4 mb-md-0  mx-auto">
+            <div class="card card-login py-4">
+                <form class="form-login" action="/storeUser" method="POST">
+                    <div class="card-header card-header-primary text-center">
+                        <h4 class="card-title">SignUp</h4>
+                    </div>
+                    <div class="card-body p-4">
+                        <div class="input-group mb-3">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text">
+                                    <i class="ion-ios-contact"></i>
+                                </span>
+                            </div>
+                            <input type="text" name="username" class="form-control" placeholder="First Name...">
+                        </div>
+                        <div class="input-group mb-3">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text">
+                                    <i class="ion-ios-paper-plane"></i>
+                                </span>
+                            </div>
+                            <input type="email" name="email" class="form-control" placeholder="Email...">
+                        </div>
+                        <div class="input-group mb-3">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text">
+                                    <i class="ion-ios-lock"></i>
+                                </span>
+                            </div>
+                            <input type="password" name="password" class="form-control" placeholder="Password...">
+                        </div>
+                    </div>
+                    <div class="footer text-center">
+                        <button class="btn btn-primary">Signup</button>
+                    </div>
+                    <br>
+                    <p style="color: white;" class="ml-2">Existing User? <a href="#" style="color: blue;">Login.</a></p>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+@endsection

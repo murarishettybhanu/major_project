@@ -1,0 +1,44 @@
+@layout('layouts.app')
+
+@section('content')
+<!-- Page Header -->
+<header class="masthead" style="background-image: url('img/home-bg.jpg')">
+  <div class="overlay"></div>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-md-10 mx-auto">
+        <div class="site-heading">
+          <h1>OCR Compiler Messages</h1>
+          <span class="subheading"></span>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- Main Content -->
+<div class="container">
+  <div class="row">
+    <div class="col-lg-8 col-md-10 mx-auto">
+      <table class="table">
+        <tr>
+          <th>User Name</th>
+          <th>Email</th>
+          <th>Query</th>
+        </tr>
+        @each(message in messages)
+        <tr>
+          <td>{{ message.username }}</td>
+          <td>{{ message.email }}</td>
+          <td>{{message.query}}</td>
+        </tr>
+        @endeach
+      </table>
+      <!-- Pager -->
+
+    </div>
+  </div>
+</div>
+
+<hr>
+@endsection

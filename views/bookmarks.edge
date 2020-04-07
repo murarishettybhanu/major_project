@@ -1,0 +1,24 @@
+@layout('layouts.app')
+@section('content')
+
+<div class="container">
+    <br>
+    @each(post in posts)
+    <div class="row">
+        <div class="col-md-3 mx-auto">
+            <img src="{{post.image}}" class="rounded" height="175" width="250" alt="">
+        </div>
+        <div class="col-md-3">
+            <h3 class="mt-2">{{post.title}}</h3>
+            <p>Language: {{post.language}}</p>
+        </div>
+        <div class="col-md-3">
+            <a href="/edit/{{post._id}}" class="btn btn-primary">Continue Working</a><br><br>
+            <a href="/delete/{{post._id}}" class="btn btn-primary">Delete</a>
+        </div>
+    </div>
+    <hr>
+    @endeach
+</div>
+
+@endsection

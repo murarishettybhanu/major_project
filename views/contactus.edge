@@ -1,0 +1,52 @@
+@layout('layouts.app')
+
+@section('content')
+
+<section class="ftco-section ftco-section-2 section-signup page-header img"
+    style="background-image: url(images/bg_2.jpg);">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4 mb-4 mb-md-0 mx-auto">
+                <div class="card card-login py-4">
+                    <form class="form-login" method="POST" action="/contactinfo">
+                        <div class="card-header card-header-primary text-center">
+                            <h4 class="card-title">Contact us</h4>
+                        </div>
+                        <div class="card-body p-4">
+                            <div class="input-group mb-3">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text">
+                                        <i class="ion-ios-contact"></i>
+                                    </span>
+                                </div>
+                                <input type="text" name="username" class="form-control" placeholder="Name">
+                            </div>
+                            <div class="input-group mb-3">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text">
+                                        <i class="ion-ios-paper-plane"></i>
+                                    </span>
+                                </div>
+                                <input type="email" name="email" class="form-control" placeholder="Email">
+                            </div>
+                            <div class="input-group mb-3">
+                                <div class="input-group-prepend">
+                                    <!-- <span class="input-group-text">
+                                        <i class="ion-ios-bulb"></i>
+                                    </span> -->
+                                </div>
+                                <textarea name="query" class="p-2" id="" cols="30" rows="5" placeholder="Query"></textarea>
+                                <!-- <input type="text" style="height: 100px;" class="form-control" placeholder="Query"> -->
+                            </div>
+                        </div>
+                        <div class="footer text-center">
+                            <button href="#" class="btn btn-primary mx-auto w-75 btn-block">Submit</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+@endsection
