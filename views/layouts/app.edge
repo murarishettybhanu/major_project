@@ -33,6 +33,24 @@
     <link rel="stylesheet" href="/css/icomoon.css">
     <link rel="stylesheet" href="/css/style.css">
 </head>
+<style>
+    .dark-mode {
+        background-color: #1c1c1e;
+        color: #fefefe;
+    }
+
+    .dark-mode a {
+        color: #ffffff;
+    }
+
+    .dark-mode img {
+        filter: grayscale(20%)
+    }
+
+    .dark-mode h2,h3 {
+        color: white;
+    }
+</style>
 
 <body onload="codeFormatter()">
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
@@ -73,7 +91,41 @@
                     <a class="nav-link" href="/logout">Logout</a>
                 </li>
                 @endif
+                <li class="nav-item">
+                    <a class="nav-link rounded" style="background-color: black; color: white;" onclick="dark()"
+                        id="mode">Dark mode</a>
+                </li>
             </ul>
+            <script>
+                window.onload = dark_mode();
+                function dark_mode() {
+                    if (localStorage.getItem("dark") == "true") {
+                        var element = document.body;
+                        element.classList.add("dark-mode");
+                        document.getElementById("mode").innerHTML = "Light mode";
+                        document.getElementById("mode").style.background = "white"
+                        document.getElementById("mode").style.color = "black"
+                        document.getElementById("mode").setAttribute("onClick", "javascript: light();");
+                    }
+                    else if (localStorage.getItem("dark") == "false") {
+                        var element = document.body;
+                        element.classList.remove("dark-mode");
+
+                        document.getElementById("mode").innerHTML = "Dark mode";
+                        document.getElementById("mode").style.background = "black"
+                        document.getElementById("mode").style.color = "white"
+                        document.getElementById("mode").setAttribute("onClick", "javascript: dark();");;
+                    }
+                }
+                function dark() {
+                    localStorage.setItem("dark", "true");
+                    location.reload();
+                }
+                function light() {
+                    localStorage.setItem("dark", "false");
+                    location.reload();
+                }
+            </script>
         </div>
     </nav>
 
