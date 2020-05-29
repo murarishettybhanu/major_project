@@ -5,8 +5,8 @@ module.exports = (req, res) => {
     console.log(req.body);
     if (error) {
       // console.log(error)
-      return res.redirect('signup')
+      return res.redirect('/signup')
     }
-    res.redirect('/')
+    res.redirect('/login')
   })
 }
